@@ -1,24 +1,48 @@
-<!-- Not Important -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML and JS Selection Box</title>
+    <title>Country and Capital</title>
+
+    <style>
+        #capital {
+            color: blue;         /* font color */
+            font-weight: bold;   /* bold text */
+            font-size: 22px;     /* font size */
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showCapital() {
+            var country = document.getElementById("country").value;
+
+            var capital = "";
+
+            if (country == "India") capital = "New Delhi";
+            if (country == "USA") capital = "Washington D.C.";
+            if (country == "Japan") capital = "Tokyo";
+            if (country == "France") capital = "Paris";
+            if (country == "Australia") capital = "Canberra";
+
+            document.getElementById("capital").innerHTML = "Capital: " + capital;
+        }
+    </script>
+
 </head>
 <body>
-    <div class="container">
-        <form>
-            <label for="country">Select a Country:</label>
-            <select id="country" name="country">
-                <option value="country1">India</option>
-                <option value="country2">Brazil</option>
-                <option value="country3">Saudi</option>
-            </select>
 
-            <label for=""></label>
-        </form>
-    </div>
+<h2>Select a Country</h2>
+
+<select id="country" onchange="showCapital()">
+    <option>Select Country</option>
+    <option>India</option>
+    <option>USA</option>
+    <option>Japan</option>
+    <option>France</option>
+    <option>Australia</option>
+</select>
+
+<p id="capital"></p>
 
 </body>
 </html>
