@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2 - A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: 16px Arial, sans-serif;
+            color: blue;
+            background-color: aqua;
+        }
+        
+        form {
+            border: 1px solid black;
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="POST">
+            <label for="name">
+                Enter your First Name:
+            </label>
+            <input type="text" name="name" id="name" required>
+            <br>
+
+            <label for="age">
+                Enter your Email:
+            </label>
+            <input type="number" name="age" id="age" required>
+            
+            <br>
+            <label for="password">
+                Enter your Password:
+            </label>
+            <input type="password" name="password" id="password" required>
+            
+            <br>
+            <button type="submit">
+                Submit
+            </button>       
+        
+        </form>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registeration Form</h2>
+        <form action="/" onsubmit="return validateForm()">
+            <label for="name">Enter Your Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Enter Your Age :</label>
+            <input type="number" id="age" name="age" required>
+
+            <lable for="email">Enter Your Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let name = document.getElementById('name').value;
+        let age = document.getElementById('age').value;
+        let email = document.getElementById('email').value;
+
+
+        // Regular Expressions
+        let nameRegex = /^[A-Za-z]+$/;           // Only A-Z
+        let ageRegex = /^(?:[0-9]|[1-9][0-9]|100)$/;  // 0 to 100
+        let emailRegex = /^[^ ]+@[^ ]+$/;        // Contains @
+
+
+        const validateForm = () => {
+            if (!nameRegex.test(name)) {
+                alert("Name should contain only letters A–Z");
+                return false;
+            }
+
+            if (!ageRegex.test(age)) {
+                alert("Age must be between 0 and 100");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Email must contain @ symbol");
+                return false;
+            }
+
+
+            alert("Validation Successful!");
+            return true;
+
+        }
+
+    </script>
+</body>
+
+</html>

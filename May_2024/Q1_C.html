@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="heading"> How are you ? I am fine</p>
+        <br>
+        <button id="btn" onclick="changeMe()">Click Me</button>
+    </div>
+
+
+    <script>
+        let heading = document.getElementById('heading');
+        let btn = document.getElementById('btn');
+        function changeMe() {
+            heading.style.color = 'blue';
+            heading.style.fontSize = "20px";
+        } 
+    </script>
+</body>
+</html>

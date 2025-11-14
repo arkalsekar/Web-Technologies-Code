@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name to Upper Case</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Name in Uppercase</h2>
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name">
+        <p>When you leave the input field, my name is transformed into uppercase</p>
+    </div>
+
+    <script>
+        document.getElementById('name').addEventListener('blur', function() {
+            this.value = this.value.toUpperCase();
+        });
+    
+    </script>
+</body>
+</html>

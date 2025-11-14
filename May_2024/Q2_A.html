@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Information Form</title>
+
+<script>
+function validateForm() {
+    let name = document.forms["userForm"]["name"].value;
+    let profession = document.forms["userForm"]["profession"].value;
+    let country = document.forms["userForm"]["country"].value;
+    let about = document.forms["userForm"]["about"].value;
+
+    if (name == "") {
+        alert("Name is required");
+        return false;
+    }
+    if (profession == "") {
+        alert("Profession is required");
+        return false;
+    }
+    if (country == "") {
+        alert("Please select a country");
+        return false;
+    }
+    if (about == "") {
+        alert("Please write how you found the site");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+</head>
+<body>
+
+<h2>User Information Form</h2>
+
+<form name="userForm" onsubmit="return validateForm()">
+
+    <!-- Name -->
+    <label>Name:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <!-- Age -->
+    <label>Age:</label><br>
+    <input type="radio" name="age" value="<18"> &lt;18<br>
+    <input type="radio" name="age" value="19-35"> 19–35<br>
+    <input type="radio" name="age" value="36-48"> 36–48<br>
+    <input type="radio" name="age" value=">49"> &gt;49<br><br>
+
+    <!-- Profession -->
+    <label>Profession:</label><br>
+    <input type="text" name="profession"><br><br>
+
+    <!-- Country -->
+    <label>Country:</label><br>
+    <select name="country">
+        <option value="">--Select--</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="UAE">UAE</option>
+    </select>
+    <br><br>
+
+    <!-- Interests -->
+    <label>Interests:</label><br>
+    <input type="checkbox" name="interests" value="Sports"> Sports<br>
+    <input type="checkbox" name="interests" value="Music"> Music<br>
+    <input type="checkbox" name="interests" value="Reading"> Reading<br>
+    <input type="checkbox" name="interests" value="Traveling"> Traveling<br><br>
+
+    <!-- Larger text field -->
+    <label>How did you find out about this site?</label><br>
+    <textarea name="about" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit Form">
+
+</form>
+
+</body>
+</html>

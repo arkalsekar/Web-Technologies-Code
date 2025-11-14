@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Table Creating </title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table thead, table tbody tr:nth-child(even) {
+            background-color: blue;
+            color: white;
+        }
+        
+        table tbody tr:nth-child(odd) {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Sr</th>
+                    <th>Title of The Book</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Database System Concepts</td>
+                    <td>Henry Korth</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Software Engineering</td>
+                    <td>Andrew Pressman</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Automata Theory</td>
+                    <td>Jeffery Ullman</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>The art of Computer Programming</td>
+                    <td>Donald Knuth</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

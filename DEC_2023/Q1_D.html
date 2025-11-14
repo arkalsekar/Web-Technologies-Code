@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Program Using HTML and JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <label for="num1">Enter Number 1</label>
+        <input type="number" name="num1" id="num1"><br><br>
+        <label for="num2">Enter Number 2</label>
+        <input type="number" name="num2" id="num2"><br><br>
+        <button onclick="addNumbers()">Add</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let result = document.getElementById("result");
+    
+        function addNumbers() {
+            let sum = parseInt(num1.value) + parseInt(num2.value);
+            result.innerHTML = "The sum is: " + sum;
+        }
+    </script>
+</body>
+
+</html>
